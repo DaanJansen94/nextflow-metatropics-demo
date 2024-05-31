@@ -1,0 +1,4 @@
+sample,single_end,barcode
+22082317,True,/data/Daan/NF-pipeline/Input/22082317.fastq
+22082324,True,/data/Daan/NF-pipeline/Input/22082324.fastq
+22100074,True,/data/Daan/NF-pipeline/Input/22100074.fastq

@@ -1,0 +1,62 @@
+Apr-15 08:35:29.339 [main] DEBUG nextflow.cli.Launcher - $> /data/pedro/miniconda3/bin/nextflow run nf-metatropics/ -profile singularity --input Projects/Pedro_protocol_cladeI/Mpox_tiling_INRB_final_run1/Input/mpox.csv --outdir Projects/Pedro_protocol_cladeI/Mpox_tiling_INRB_final_run1/Output/ --fasta DB/Human_Genome/chm13v2.0.fa --minLength 200 --dbmeta DB/MetamapsDB_010224 --front 18 --tail 18
+Apr-15 08:35:29.402 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 0.30.1
+Apr-15 08:35:29.509 [main] DEBUG nextflow.scm.AssetManager - Listing projects in folder: /data/pedro/miniconda3/share/nextflow/assets
+Apr-15 08:35:29.515 [main] INFO  nextflow.cli.CmdRun - Pulling nextflow-io/nf-metatropics ...
+Apr-15 08:35:29.516 [main] DEBUG nextflow.scm.RepositoryProvider - Request [credentials -:-] -> https://api.github.com/repos/nextflow-io/nf-metatropics/contents/nextflow.config
+Apr-15 08:35:29.960 [main] DEBUG nextflow.scm.RepositoryProvider - Request [credentials -:-] -> https://api.github.com/repos/nextflow-io/nf-metatropics/contents/main.nf
+Apr-15 08:35:30.146 [main] DEBUG nextflow.scm.RepositoryProvider - Request [credentials -:-] -> https://api.github.com/repos/nextflow-io/nf-metatropics
+Apr-15 08:35:30.415 [main] DEBUG nextflow.cli.Launcher - Operation aborted
+java.io.FileNotFoundException: https://api.github.com/repos/nextflow-io/nf-metatropics
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1926)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1921)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1920)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1490)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1474)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:254)
+	at nextflow.scm.RepositoryProvider.invoke(RepositoryProvider.groovy:113)
+	at nextflow.scm.RepositoryProvider.memoizedMethodPriv$invokeAndParseResponseString(RepositoryProvider.groovy:174)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:98)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1225)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1034)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokePogoMethod(InvokerHelper.java:947)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethod(InvokerHelper.java:930)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethodSafe(InvokerHelper.java:92)
+	at nextflow.scm.RepositoryProvider$_closure1.doCall(RepositoryProvider.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:98)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:264)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1034)
+	at groovy.lang.Closure.call(Closure.java:418)
+	at org.codehaus.groovy.runtime.memoize.Memoize$MemoizeFunction.call(Memoize.java:134)
+	at groovy.lang.Closure.call(Closure.java:434)
+	at nextflow.scm.RepositoryProvider.invokeAndParseResponse(RepositoryProvider.groovy)
+	at nextflow.scm.RepositoryProvider.validateFor(RepositoryProvider.groovy:207)
+	at nextflow.scm.AssetManager.checkValidRemoteRepo(AssetManager.groovy:344)
+	at nextflow.scm.AssetManager.download(AssetManager.groovy:547)
+	at nextflow.scm.AssetManager.download(AssetManager.groovy)
+	at nextflow.cli.CmdRun.getScriptFile(CmdRun.groovy:292)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:207)
+	at nextflow.cli.Launcher.run(Launcher.groovy:428)
+	at nextflow.cli.Launcher.main(Launcher.groovy:586)
+Caused by: java.io.FileNotFoundException: https://api.github.com/repos/nextflow-io/nf-metatropics
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1872)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1474)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:338)
+	at nextflow.scm.RepositoryProvider.checkResponse(RepositoryProvider.groovy:142)
+	at nextflow.scm.RepositoryProvider.invoke(RepositoryProvider.groovy:110)
+	... 33 common frames omitted
