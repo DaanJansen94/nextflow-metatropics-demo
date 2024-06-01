@@ -6,6 +6,7 @@ tasks:
       export TZ=Europe/London
       sudo apt-get update
       export DEBIAN_FRONTEND=noninteractive
+      echo "keyboard-configuration  keyboard-configuration/xkb-keymap select us" | sudo debconf-set-selections
       sudo apt-get install -y tzdata apt-utils build-essential libseccomp-dev pkg-config squashfs-tools cryptsetup
       wget https://github.com/apptainer/singularity/releases/download/v3.8.5/singularity-3.8.5.tar.gz
       tar -xzf singularity-3.8.5.tar.gz
