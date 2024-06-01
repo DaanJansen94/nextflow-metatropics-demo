@@ -3,23 +3,9 @@ image: gitpod/workspace-full
 tasks:
   - init: |
       git config lfs.https://github.com/DaanJansen94/NF_pipeline.git/info/lfs.locksverify false
-    command: git config lfs.https://github.com/DaanJansen94/NF_pipeline.git/info/lfs.locksverify false
 
-  - init: |
+   command: |
       sudo apt-get update
-    command: sudo apt-get update
-
-  - init: |
-      git clone https://github.com/hpcng/singularity.git
-      cd singularity
-      git checkout v3.8.4
-      ./mconfig
-      cd ./builddir
-      make
-      sudo make install
-      cd ../../
-      rm -rf singularity/
-    command: |
       git clone https://github.com/hpcng/singularity.git &&
       cd singularity &&
       git checkout v3.8.4 &&
@@ -30,11 +16,8 @@ tasks:
       cd ../../ &&
       rm -rf singularity/
 
-  - init: |
-      curl -s https://get.nextflow.io | bash
-      sudo mv nextflow /usr/local/bin/
-    command: |
+      # nextlow
       curl -s https://get.nextflow.io | bash &&
       sudo mv nextflow /usr/local/bin/
 
-  - command: echo "Nextflow and Singularity installed"
+      echo "Nextflow and Singularity installed"
