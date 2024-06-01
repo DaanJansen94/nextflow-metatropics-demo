@@ -16,7 +16,6 @@ tasks:
       cd ../../ &&
       rm -rf singularity/
 
-      # nextlow
-      curl -s https://get.nextflow.io | bash
+      curl -s https://get.nextflow.io | bash &&
       sudo mv nextflow /usr/local/bin/
       echo "Nextflow and Singularity installed"
