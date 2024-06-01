@@ -4,7 +4,7 @@ tasks:
   - init: |
       sudo apt-get update
       sudo apt-get install -y build-essential libseccomp-dev pkg-config squashfs-tools cryptsetup
-      wget https://github.com/hpcng/singularity/releases/download/v3.8.5/singularity-ce-3.8.5.tar.gz
+      wget https://github.com/apptainer/singularity/releases/download/v3.8.5/singularity-3.8.5.tar.gz
       tar -xzf singularity-ce-3.8.5.tar.gz
       cd singularity-ce-3.8.5
       ./mconfig
@@ -15,10 +15,3 @@ tasks:
       curl -s https://get.nextflow.io | bash
       sudo mv nextflow /usr/local/bin/
     command: echo "Nextflow and Singularity installed"
-
-vscode:
-  extensions:
-    - ms-azuretools.vscode-docker
-    - ms-python.python
-    - eamodio.gitlens
-    - ms-vscode-remote.remote-containers
