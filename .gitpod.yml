@@ -5,13 +5,13 @@ tasks:
       sudo apt-get update
       sudo apt-get install -y build-essential libseccomp-dev pkg-config squashfs-tools cryptsetup
       wget https://github.com/apptainer/singularity/releases/download/v3.8.5/singularity-3.8.5.tar.gz
-      tar -xzf singularity-ce-3.8.5.tar.gz
-      cd singularity-ce-3.8.5
+      tar -xzf singularity-3.8.5.tar.gz
+      cd singularity-3.8.5
       ./mconfig
       make -C builddir
       sudo make -C builddir install
       cd ..
-      rm -rf singularity-ce-3.8.5 singularity-ce-3.8.5.tar.gz
+      rm -rf ingularity-3.8.5 ingularity-3.8.5.tar.gz
       curl -s https://get.nextflow.io | bash
       sudo mv nextflow /usr/local/bin/
     command: echo "Nextflow and Singularity installed"
