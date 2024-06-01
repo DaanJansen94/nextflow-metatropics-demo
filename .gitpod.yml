@@ -12,7 +12,8 @@ tasks:
       make
       sudo make install
       cd ../../
-      
+      rm -rf singularity/
+
       # nextflow
       curl -s https://get.nextflow.io | bash
       sudo mv nextflow /usr/local/bin/
