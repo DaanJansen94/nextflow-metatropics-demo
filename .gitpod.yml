@@ -5,7 +5,7 @@ tasks:
       git config lfs.https://github.com/DaanJansen94/NF_pipeline.git/info/lfs.locksverify false
 
     command: 
-          sudo apt-get update
+      sudo apt-get update
       git clone https://github.com/hpcng/singularity.git &&
       cd singularity &&
       git checkout v3.8.4 &&
