@@ -12,7 +12,7 @@ tasks:
       make -C builddir
       sudo make -C builddir install
       cd ..
-      rm -rf ingularity-3.8.5 ingularity-3.8.5.tar.gz
+      rm -rf singularity-3.8.5 singularity-3.8.5.tar.gz
       curl -s https://get.nextflow.io | bash
       sudo mv nextflow /usr/local/bin/
     command: echo "Nextflow and Singularity installed"
