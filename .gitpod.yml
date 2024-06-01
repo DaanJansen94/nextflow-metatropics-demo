@@ -4,8 +4,8 @@ tasks:
   - init: |
       git config lfs.https://github.com/DaanJansen94/NF_pipeline.git/info/lfs.locksverify false
 
-   command: |
-      sudo apt-get update
+    command: 
+          sudo apt-get update
       git clone https://github.com/hpcng/singularity.git &&
       cd singularity &&
       git checkout v3.8.4 &&
@@ -19,5 +19,4 @@ tasks:
       # nextlow
       curl -s https://get.nextflow.io | bash &&
       sudo mv nextflow /usr/local/bin/
-
       echo "Nextflow and Singularity installed"
