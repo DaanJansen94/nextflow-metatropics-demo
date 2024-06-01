@@ -4,20 +4,13 @@ tasks:
   - init: |
       git config lfs.https://github.com/DaanJansen94/NF_pipeline.git/info/lfs.locksverify false
       sudo apt-get update
-      apt-get install dialog
-      %post
-      export TZ='America/New_York'
-      export DEBIAN_FRONTEND=noninteractive
-      export DEBIAN_FRONTEND=teletype
-      sudo apt-get install -y tzdata apt-utils build-essential libseccomp-dev pkg-config squashfs-tools cryptsetup
-      wget https://github.com/apptainer/singularity/releases/download/v3.8.5/singularity-3.8.5.tar.gz
-      tar -xzf singularity-3.8.5.tar.gz
-      cd singularity-3.8.5
+      git clone https://github.com/hpcng/singularity.git
+      cd singularity
+      git checkout v3.8.4
       ./mconfig
-      make -C builddir
-      sudo make -C builddir install
-      cd ..
-      rm -rf singularity-3.8.5 singularity-3.8.5.tar.gz
+      cd ./builddir
+      make
+      sudo make install
 
       # nextflow
       curl -s https://get.nextflow.io | bash
