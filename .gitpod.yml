@@ -3,9 +3,10 @@ image: gitpod/workspace-full
 tasks:
   - init: |
       git config lfs.https://github.com/DaanJansen94/NF_pipeline.git/info/lfs.locksverify false
+      ENV TZ=Europe/London
       sudo apt-get update
-      sudo apt-get install -y dialog apt-utils build-essential libseccomp-dev pkg-config squashfs-tools cryptsetup
-      DEBIAN_FRONTEND=noninteractive sudo apt-get install -y dialog apt-utils build-essential libseccomp-dev pkg-config squashfs-tools cryptsetup
+      sudo DEBIAN_FRONTEND=noninteractive
+      sudo apt-get install -y apt-utils build-essential libseccomp-dev pkg-config squashfs-tools cryptsetup
       wget https://github.com/apptainer/singularity/releases/download/v3.8.5/singularity-3.8.5.tar.gz
       tar -xzf singularity-3.8.5.tar.gz
       cd singularity-3.8.5
