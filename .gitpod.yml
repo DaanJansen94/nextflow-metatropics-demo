@@ -2,6 +2,8 @@ image: gitpod/workspace-full
 
 tasks:
   - init: |
+      DEBIAN_FRONTEND=noninteractive apt-get install keyboard-configuration
+      
       git config lfs.https://github.com/DaanJansen94/NF_pipeline.git/info/lfs.locksverify false
       sudo apt-get update
       sudo apt-get install -y build-essential libseccomp-dev pkg-config squashfs-tools cryptsetup
@@ -13,6 +15,8 @@ tasks:
       sudo make -C builddir install
       cd ..
       rm -rf singularity-3.8.5 singularity-3.8.5.tar.gz
+
+      # nextflow
       curl -s https://get.nextflow.io | bash
       sudo mv nextflow /usr/local/bin/
     command: echo "Nextflow and Singularity installed"
