@@ -11,7 +11,8 @@ tasks:
       cd ./builddir
       make
       sudo make install
-
+      cd ../../
+      
       # nextflow
       curl -s https://get.nextflow.io | bash
       sudo mv nextflow /usr/local/bin/
