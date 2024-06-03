@@ -4,4 +4,4 @@ tasks:
   - command: | 
       curl -s https://get.nextflow.io | bash &&
       sudo mv nextflow /usr/local/bin/
-      echo "Nextflow and Singularity installed"
+      echo "Nextflow installed"
