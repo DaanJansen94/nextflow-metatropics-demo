@@ -1,7 +1,7 @@
 image: gitpod/workspace-full
 
 tasks:
-  - init: |
+  - init: 
       git config lfs.https://github.com/DaanJansen94/NF_pipeline.git/info/lfs.locksverify false
 
   - command: | 
