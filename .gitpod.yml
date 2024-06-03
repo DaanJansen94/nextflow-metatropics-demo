@@ -1,22 +1,7 @@
 image: gitpod/workspace-full
 
 tasks:
-  - init: 
-      git config lfs.https://github.com/DaanJansen94/NF_pipeline.git/info/lfs.locksverify false
-
   - command: | 
-      sudo apt-get update
-      sudo apt-get install -y apt-utils build-essential libseccomp-dev pkg-config squashfs-tools cryptsetup
-      git clone https://github.com/hpcng/singularity.git &&
-      cd singularity &&
-      git checkout v3.8.4 &&
-      ./mconfig &&
-      cd ./builddir &&
-      make &&
-      sudo make install &&
-      cd ../../ &&
-      rm -rf singularity/
-
       curl -s https://get.nextflow.io | bash &&
       sudo mv nextflow /usr/local/bin/
       echo "Nextflow and Singularity installed"
