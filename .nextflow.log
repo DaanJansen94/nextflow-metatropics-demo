@@ -1,0 +1,372 @@
+Jun-03 15:29:53.069 [main] DEBUG nextflow.cli.Launcher - $> nextflow run nf-metatropics/ -profile singularity --input /data/Daan/Projects/Gitpod/NF_pipeline/Input/mpox.csv --outdir /data/Daan/Projects/Gitpod/NF_pipeline/Output --fasta /data/Daan/Projects/Gitpod/NF_pipeline/DB/Human_Genome/Human_genome.fa --minLength 200 --dbmeta /data/Daan/Projects/Gitpod/NF_pipeline/DB/Metamaps_DB_NF --pair true --front 18 --tail 18 -resume
+Jun-03 15:29:53.173 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.1
+Jun-03 15:29:53.195 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/itg.be/djansen/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.3,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.1
+Jun-03 15:29:53.204 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jun-03 15:29:53.205 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jun-03 15:29:53.208 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Jun-03 15:29:53.216 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jun-03 15:29:54.265 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/nextflow.config
+Jun-03 15:29:54.265 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/nextflow.config
+Jun-03 15:29:54.275 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `singularity`
+Jun-03 15:29:55.458 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [bih, cfc_dev, uzl_omics, ifb_core, denbi_qbic, alice, mjolnir_globe, uppmax, incliva, ilifu, uge, rosalind_uge, lugh, mccleary, unibe_ibu, vai, czbiohub_aws, jax, ccga_med, scw, unc_longleaf, tigem, tubingen_apg, google, apollo, ipop_up, vsc_calcua, pdc_kth, googlels, daisybio, eddie, medair, biowulf, bi, bigpurple, adcra, cedars, pawsey_setonix, vsc_kul_uhasselt, pawsey_nimbus, ucl_myriad, utd_ganymede, charliecloud, icr_davros, ceres, munin, arm, rosalind, hasta, cfc, uzh, ebi_codon_slurm, ebc, ku_sund_dangpu, ccga_dx, crick, marvin, biohpc_gen, shifter, mana, mamba, york_viking, unc_lccc, wehi, awsbatch, wustl_htcf, arcc, imperial, maestro, software_license, utd_europa, genotoul, nci_gadi, abims, janelia, nu_genomics, googlebatch, oist, sahmri, mpcdf, leicester, vsc_ugent, create, sage, cambridge, jex, podman, ebi_codon, cheaha, xanadu, nyu_hpc, test, marjorie, computerome, ucd_sonic, seg_globe, sanger, dkfz, pasteur, einstein, ethz_euler, m3c, test_full, imb, ucl_cscluster, tuos_stanage, azurebatch, hki, crukmi, csiro_petrichor, qmul_apocrita, docker, engaging, gis, hypatia, psmn, eva, nygc, fgcz, conda, crg, singularity, self_hosted_runner, tufts, uw_hyak_pedslabs, utd_sysbio, debug, genouest, cbe, phoenix, gitpod, seawulf, uod_hpc, fub_curta, uct_hpc, aws_tower, binac]
+Jun-03 15:29:55.505 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Jun-03 15:29:55.523 [main] INFO  nextflow.cli.CmdRun - Launching `nf-metatropics/main.nf` [irreverent_hugle] DSL2 - revision: 8cb27832a9
+Jun-03 15:29:55.524 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jun-03 15:29:55.524 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Jun-03 15:29:55.528 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/itg.be/djansen/.nextflow/secrets/store.json
+Jun-03 15:29:55.533 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@3c33fcf8] - activable => nextflow.secret.LocalSecretsProvider@3c33fcf8
+Jun-03 15:29:55.592 [main] DEBUG nextflow.Session - Session UUID: e2ef90ef-405f-455e-a84c-6aed7169a76f
+Jun-03 15:29:55.592 [main] DEBUG nextflow.Session - Run name: irreverent_hugle
+Jun-03 15:29:55.592 [main] DEBUG nextflow.Session - Executor pool size: 16
+Jun-03 15:29:55.600 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Jun-03 15:29:55.604 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=48; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Jun-03 15:29:55.629 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 23.10.1 build 5891
+  Created: 12-01-2024 22:01 UTC (23:01 CEST)
+  System: Linux 5.15.0-94-generic
+  Runtime: Groovy 3.0.19 on OpenJDK 64-Bit Server VM 11.0.13+7-b1751.21
+  Encoding: UTF-8 (UTF-8)
+  Process: 692026@arezendeprox [127.0.1.1]
+  CPUs: 16 - Mem: 125.8 GB (3 GB) - Swap: 2 GB (1.2 GB)
+Jun-03 15:29:55.652 [main] DEBUG nextflow.Session - Work-dir: /data/Daan/Projects/Gitpod/NF_pipeline/work [ext2/ext3]
+Jun-03 15:29:55.670 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jun-03 15:29:55.678 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jun-03 15:29:55.717 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Jun-03 15:29:55.727 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 17; maxThreads: 1000
+Jun-03 15:29:55.877 [main] DEBUG nextflow.Session - Session start
+Jun-03 15:29:55.894 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /data/Daan/Projects/Gitpod/NF_pipeline/Output/pipeline_info/execution_trace_2024-06-03_15-29-55.txt
+Jun-03 15:29:55.903 [main] DEBUG nextflow.Session - Using default localLib path: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/lib
+Jun-03 15:29:55.909 [main] DEBUG nextflow.Session - Adding to the classpath library: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/lib
+Jun-03 15:29:55.909 [main] DEBUG nextflow.Session - Adding to the classpath library: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/lib/nfcore_external_java_deps.jar
+Jun-03 15:29:56.714 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jun-03 15:29:56.763 [main] INFO  nextflow.Nextflow - 
+
+-[2m----------------------------------------------------[0m-
+                                        [0;32m,--.[0;30m/[0;32m,-.[0m
+[0;34m        ___     __   __   __   ___     [0;32m/,-._.--~'[0m
+[0;34m  |\ | |__  __ /  ` /  \ |__) |__         [0;33m}  {[0m
+[0;34m  | \| |       \__, \__/ |  \ |___     [0;32m\`-._,-`-,[0m
+                                        [0;32m`._,._,'[0m
+[0;35m  nf-core/metatropics v1.0dev[0m
+-[2m----------------------------------------------------[0m-
+[1mCore Nextflow options[0m
+  [0;34mrunName        : [0;32mirreverent_hugle[0m
+  [0;34mcontainerEngine: [0;32msingularity[0m
+  [0;34mlaunchDir      : [0;32m/data/Daan/Projects/Gitpod/NF_pipeline[0m
+  [0;34mworkDir        : [0;32m/data/Daan/Projects/Gitpod/NF_pipeline/work[0m
+  [0;34mprojectDir     : [0;32m/data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics[0m
+  [0;34muserName       : [0;32mdjansen[0m
+  [0;34mprofile        : [0;32msingularity[0m
+  [0;34mconfigFiles    : [0;32m/data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/nextflow.config[0m
+
+[1mInput/output options[0m
+  [0;34minput          : [0;32m/data/Daan/Projects/Gitpod/NF_pipeline/Input/mpox.csv[0m
+  [0;34minput_dir      : [0;32mnull[0m
+  [0;34moutdir         : [0;32m/data/Daan/Projects/Gitpod/NF_pipeline/Output[0m
+
+[1mReference genome options[0m
+  [0;34mfasta          : [0;32m/data/Daan/Projects/Gitpod/NF_pipeline/DB/Human_Genome/Human_genome.fa[0m
+
+[1mMax job request options[0m
+  [0;34mmax_memory     : [0;32m64.GB[0m
+
+[1mGeneric options[0m
+  [0;34mdbmeta         : [0;32m/data/Daan/Projects/Gitpod/NF_pipeline/DB/Metamaps_DB_NF[0m
+  [0;34mnrdb           : [0;32mnull[0m
+  [0;34mpair           : [0;32mtrue[0m
+  [0;34mfront          : [0;32m18[0m
+  [0;34mtail           : [0;32m18[0m
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+-[2m----------------------------------------------------[0m-
+If you use nf-core/metatropics for your analysis please cite:
+
+* The nf-core framework
+  https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+  https://github.com/nf-core/metatropics/blob/master/CITATIONS.md
+-[2m----------------------------------------------------[0m-
+Jun-03 15:29:59.612 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_METATROPICS:METATROPICS:INPUT_CHECK_METATROPICS:SAMPLESHEET_CHECK_METATROPICS
+Jun-03 15:29:59.618 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-03 15:29:59.618 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-03 15:29:59.623 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Jun-03 15:29:59.627 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=16; memory=125.8 GB; capacity=16; pollInterval=100ms; dumpInterval=5m
+Jun-03 15:29:59.629 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Jun-03 15:29:59.772 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-03 15:29:59.774 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-03 15:29:59.792 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_METATROPICS:METATROPICS:FASTP
+Jun-03 15:29:59.792 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:FASTP` matches process NFCORE_METATROPICS:METATROPICS:FASTP
+Jun-03 15:29:59.795 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-03 15:29:59.795 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-03 15:29:59.803 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_METATROPICS:METATROPICS:NANOPLOT
+Jun-03 15:29:59.804 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-03 15:29:59.804 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-03 15:29:59.809 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_METATROPICS:METATROPICS:HUMAN_MAPPING:MINIMAP2_ALIGN
+Jun-03 15:29:59.810 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:MINIMAP2_ALIGN` matches process NFCORE_METATROPICS:METATROPICS:HUMAN_MAPPING:MINIMAP2_ALIGN
+Jun-03 15:29:59.810 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-03 15:29:59.810 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-03 15:29:59.817 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_METATROPICS:METATROPICS:HUMAN_MAPPING:SAMTOOLS_SORT
+Jun-03 15:29:59.818 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SAMTOOLS_SORT` matches process NFCORE_METATROPICS:METATROPICS:HUMAN_MAPPING:SAMTOOLS_SORT
+Jun-03 15:29:59.819 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-03 15:29:59.819 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-03 15:29:59.826 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_METATROPICS:METATROPICS:HUMAN_MAPPING:SAMTOOLS_FASTQ
+Jun-03 15:29:59.827 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SAMTOOLS_FASTQ` matches process NFCORE_METATROPICS:METATROPICS:HUMAN_MAPPING:SAMTOOLS_FASTQ
+Jun-03 15:29:59.828 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-03 15:29:59.828 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-03 15:29:59.835 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_METATROPICS:METATROPICS:METAMAPS_MAP
+Jun-03 15:29:59.835 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:METAMAPS_MAP` matches process NFCORE_METATROPICS:METATROPICS:METAMAPS_MAP
+Jun-03 15:29:59.836 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-03 15:29:59.837 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-03 15:29:59.863 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_METATROPICS:METATROPICS:METAMAPS_CLASSIFY
+Jun-03 15:29:59.864 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:METAMAPS_CLASSIFY` matches process NFCORE_METATROPICS:METATROPICS:METAMAPS_CLASSIFY
+Jun-03 15:29:59.864 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-03 15:29:59.864 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-03 15:29:59.883 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_METATROPICS:METATROPICS:R_METAPLOT
+Jun-03 15:29:59.884 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:R_METAPLOT` matches process NFCORE_METATROPICS:METATROPICS:R_METAPLOT
+Jun-03 15:29:59.885 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-03 15:29:59.885 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-03 15:29:59.888 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_METATROPICS:METATROPICS:KRONA_KRONADB
+Jun-03 15:29:59.888 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-03 15:29:59.888 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-03 15:29:59.891 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_METATROPICS:METATROPICS:KRONA_KTIMPORTTAXONOMY
+Jun-03 15:29:59.892 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-03 15:29:59.892 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-03 15:29:59.904 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:REF_FASTA` matches process NFCORE_METATROPICS:METATROPICS:REF_FASTA
+Jun-03 15:29:59.906 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-03 15:29:59.906 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-03 15:29:59.930 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-03 15:29:59.930 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-03 15:29:59.940 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_METATROPICS:METATROPICS:SEQTK_SUBSEQ
+Jun-03 15:29:59.940 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-03 15:29:59.940 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-03 15:29:59.948 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_METATROPICS:METATROPICS:MEDAKA
+Jun-03 15:29:59.949 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-03 15:29:59.949 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-03 15:29:59.960 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_METATROPICS:METATROPICS:SAMTOOLS_COVERAGE
+Jun-03 15:29:59.960 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-03 15:29:59.960 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-03 15:29:59.967 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_METATROPICS:METATROPICS:IVAR_CONSENSUS
+Jun-03 15:29:59.968 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:IVAR_CONSENSUS` matches process NFCORE_METATROPICS:METATROPICS:IVAR_CONSENSUS
+Jun-03 15:29:59.968 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-03 15:29:59.968 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-03 15:29:59.973 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_METATROPICS:METATROPICS:HOMOPOLISH_POLISHING
+Jun-03 15:29:59.973 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:HOMOPOLISH_POLISHING` matches process NFCORE_METATROPICS:METATROPICS:HOMOPOLISH_POLISHING
+Jun-03 15:29:59.974 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-03 15:29:59.974 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-03 15:30:00.011 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:ADDING_DEPTH` matches process NFCORE_METATROPICS:METATROPICS:ADDING_DEPTH
+Jun-03 15:30:00.011 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-03 15:30:00.011 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-03 15:30:00.018 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-03 15:30:00.018 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-03 15:30:00.019 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: SAMTOOLS_COVERAGE, GUPPY_ONT, NFCORE_METATROPICS:METATROPICS:REF_FASTA, IVAR_CONSENSUS, FASTP, FINAL_REPORT, SAMPLESHEET_CHECK_METATROPICS, NFCORE_METATROPICS:METATROPICS:ADDING_DEPTH, METAMAPS_CLASSIFY, MAFFT_TWO, NFCORE_METATROPICS:METATROPICS:METAMAPS_MAP, NFCORE_METATROPICS:METATROPICS:METAMAPS_CLASSIFY, NFCORE_METATROPICS:METATROPICS:SAMTOOLS_COVERAGE, NFCORE_METATROPICS:METATROPICS:REFFIX_FASTA, NFCORE_METATROPICS:METATROPICS:SEQTK_SUBSEQ, NFCORE_METATROPICS:METATROPICS:INPUT_CHECK_METATROPICS:SAMPLESHEET_CHECK_METATROPICS, NFCORE_METATROPICS:METATROPICS:FIX:FIX_NAMES, NFCORE_METATROPICS:METATROPICS:MEDAKA, SNP_COMPARE, NFCORE_METATROPICS:METATROPICS:HUMAN_MAPPING:SAMTOOLS_SORT, NANOPLOT, REF_FASTA, HOMOPOLISH_POLISHING, NFCORE_METATROPICS:METATROPICS:KRONA_KRONADB, FIX_NAMES, NFCORE_METATROPICS:METATROPICS:IVAR_CONSENSUS, MULTIQC, NFCORE_METATROPICS:METATROPICS:R_METAPLOT, SEQTK_SUBSEQ, REFFIX_FASTA, SAMTOOLS_FASTQ, SAMTOOLS_SORT, SNIPIT_SNPPLOT, NFCORE_METATROPICS:METATROPICS:NANOPLOT, ADDING_DEPTH, BAM_READCOUNT, NFCORE_METATROPICS:METATROPICS:HUMAN_MAPPING:SAMTOOLS_FASTQ, SAMPLESHEET_CHECK, METAMAPS_MAP, NFCORE_METATROPICS:METATROPICS:HOMOPOLISH_POLISHING, NFCORE_METATROPICS:METATROPICS:FINAL_REPORT, KRONA_KTIMPORTTAXONOMY, NFCORE_METATROPICS:METATROPICS:KRONA_KTIMPORTTAXONOMY, MAFFT_ALIGN, SNIPIT_TWO, R_METAPLOT, NFCORE_METATROPICS:METATROPICS:FASTP, CUSTOM_DUMPSOFTWAREVERSIONS, MINIMAP2_ALIGN, MEDAKA, NFCORE_METATROPICS:METATROPICS:HUMAN_MAPPING:MINIMAP2_ALIGN, GUPPYDEMULTI_DEMULTIPLEXING, KRONA_KRONADB
+Jun-03 15:30:00.023 [main] DEBUG nextflow.Session - Igniting dataflow network (25)
+Jun-03 15:30:00.028 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_METATROPICS:METATROPICS:INPUT_CHECK_METATROPICS:SAMPLESHEET_CHECK_METATROPICS
+Jun-03 15:30:00.029 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_METATROPICS:METATROPICS:FIX:FIX_NAMES
+Jun-03 15:30:00.029 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_METATROPICS:METATROPICS:FASTP
+Jun-03 15:30:00.029 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_METATROPICS:METATROPICS:NANOPLOT
+Jun-03 15:30:00.029 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_METATROPICS:METATROPICS:HUMAN_MAPPING:MINIMAP2_ALIGN
+Jun-03 15:30:00.029 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_METATROPICS:METATROPICS:HUMAN_MAPPING:SAMTOOLS_SORT
+Jun-03 15:30:00.029 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_METATROPICS:METATROPICS:HUMAN_MAPPING:SAMTOOLS_FASTQ
+Jun-03 15:30:00.029 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_METATROPICS:METATROPICS:METAMAPS_MAP
+Jun-03 15:30:00.029 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_METATROPICS:METATROPICS:METAMAPS_CLASSIFY
+Jun-03 15:30:00.029 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_METATROPICS:METATROPICS:R_METAPLOT
+Jun-03 15:30:00.032 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_METATROPICS:METATROPICS:KRONA_KRONADB
+Jun-03 15:30:00.032 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_METATROPICS:METATROPICS:KRONA_KTIMPORTTAXONOMY
+Jun-03 15:30:00.032 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_METATROPICS:METATROPICS:REF_FASTA
+Jun-03 15:30:00.032 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_METATROPICS:METATROPICS:REFFIX_FASTA
+Jun-03 15:30:00.033 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_METATROPICS:METATROPICS:SEQTK_SUBSEQ
+Jun-03 15:30:00.037 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_METATROPICS:METATROPICS:MEDAKA
+Jun-03 15:30:00.037 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_METATROPICS:METATROPICS:SAMTOOLS_COVERAGE
+Jun-03 15:30:00.037 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_METATROPICS:METATROPICS:IVAR_CONSENSUS
+Jun-03 15:30:00.041 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_METATROPICS:METATROPICS:HOMOPOLISH_POLISHING
+Jun-03 15:30:00.042 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_METATROPICS:METATROPICS:ADDING_DEPTH
+Jun-03 15:30:00.042 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_METATROPICS:METATROPICS:FINAL_REPORT
+Jun-03 15:30:00.045 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_69fc0b4c831dba07: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/../modules/nf-core/seqtk/subseq/main.nf
+  Script_c4662fb3aac92c92: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/../modules/local/metamaps/map.nf
+  Script_6cc84ad7d1944f96: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/../modules/local/homopolish/polishing.nf
+  Script_2cc943b1fe924236: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/../subworkflows/local/../../modules/nf-core/samtools/fastq/main.nf
+  Script_5f7d5cff53e03a58: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/../modules/nf-core/krona/ktimporttaxonomy/main.nf
+  Script_21a23e14fb0dd434: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/main.nf
+  Script_13ab852080575071: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/../subworkflows/local/human_mapping.nf
+  Script_732309d618967914: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/../modules/nf-core/medaka/main.nf
+  Script_93928184cca6dafb: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/../modules/nf-core/nanoplot/main.nf
+  Script_02b22ed7eb3d2c1a: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/../modules/nf-core/samtools/coverage/main.nf
+  Script_778cf7e3b59f1c79: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/../modules/nf-core/multiqc/main.nf
+  Script_b200dfb462c5d6ea: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/../modules/local/ref_fasta.nf
+  Script_2b17c257c53fab09: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/../modules/local/guppydemulti/demultiplexing.nf
+  Script_56ba915166afacce: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/../modules/local/final_report.nf
+  Script_7193124e24193669: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/../subworkflows/local/../../modules/local/samplesheet_check_metatropics.nf
+  Script_4cb4af5f5b1ffba7: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/metatropics.nf
+  Script_ba378aff46b7b5da: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/../modules/local/snp/compare.nf
+  Script_266bc757a61ffdfd: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/../modules/nf-core/krona/kronadb/main.nf
+  Script_bcae9d78cec5a083: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/../subworkflows/local/subfix_names.nf
+  Script_bbdfa4e999457d0a: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/../modules/local/r/metaplot.nf
+  Script_518ec5a12fb128ff: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/../subworkflows/local/../../modules/nf-core/samtools/sort/main.nf
+  Script_fea17f1e16dcf164: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/../modules/local/snipit/snpplot.nf
+  Script_ee85c097cd78b7d4: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/../modules/local/bam/readcount.nf
+  Script_4562fd2934e88c07: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/../modules/nf-core/ivar/consensus/main.nf
+  Script_dc48eaa19a5e7ee2: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/../modules/nf-core/fastp/main.nf
+  Script_959f309d6d18f9a1: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/../modules/local/reffix_fasta.nf
+  Script_becb34e1749c3fd6: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/../subworkflows/local/../../modules/local/fix_names.nf
+  Script_c8338c7a987c82e9: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/../subworkflows/local/input_check_metatropics.nf
+  Script_60bbcc5709675853: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/../modules/local/metamaps/classify.nf
+  Script_dc576499bdaf05f8: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/../modules/nf-core/custom/dumpsoftwareversions/main.nf
+  Script_3e1ccb830dfd5a49: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/../subworkflows/local/input_check.nf
+  Script_098fd64bb66d9c9a: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/../subworkflows/local/../../modules/local/samplesheet_check.nf
+  Script_90a936fd39f85f4f: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/../modules/local/guppy/ont.nf
+  Script_4dfc42429a89b126: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/../subworkflows/local/../../modules/nf-core/minimap2/align/main.nf
+  Script_49f7e06c8a2db42b: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/../modules/local/mafft/align.nf
+  Script_eb680310eddddd80: /data/Daan/Projects/Gitpod/NF_pipeline/nf-metatropics/./workflows/../modules/local/adding_depth.nf
+Jun-03 15:30:00.046 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Jun-03 15:30:00.046 [main] DEBUG nextflow.Session - Session await
+Jun-03 15:30:00.109 [Actor Thread 17] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=https://depot.galaxyproject.org/singularity/krona:2.7.1--pl526_5; path=/data/Daan/Projects/Gitpod/NF_pipeline/work/singularity/depot.galaxyproject.org-singularity-krona-2.7.1--pl526_5.img
+Jun-03 15:30:00.113 [Actor Thread 17] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=https://depot.galaxyproject.org/singularity/python:3.8.3; path=/data/Daan/Projects/Gitpod/NF_pipeline/work/singularity/depot.galaxyproject.org-singularity-python-3.8.3.img
+Jun-03 15:30:00.229 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-03 15:30:00.231 [Task submitter] INFO  nextflow.Session - [d7/e7a2d8] Submitted process > NFCORE_METATROPICS:METATROPICS:INPUT_CHECK_METATROPICS:SAMPLESHEET_CHECK_METATROPICS (mpox.csv)
+Jun-03 15:30:00.241 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-03 15:30:00.241 [Task submitter] INFO  nextflow.Session - [6b/e8e516] Submitted process > NFCORE_METATROPICS:METATROPICS:KRONA_KRONADB
+Jun-03 15:30:01.992 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: NFCORE_METATROPICS:METATROPICS:INPUT_CHECK_METATROPICS:SAMPLESHEET_CHECK_METATROPICS (mpox.csv); status: COMPLETED; exit: 0; error: -; workDir: /data/Daan/Projects/Gitpod/NF_pipeline/work/d7/e7a2d8fda6eab170f77725ae7e04a0]
+Jun-03 15:30:02.019 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=48; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Jun-03 15:30:02.066 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-03 15:30:02.067 [Task submitter] INFO  nextflow.Session - [93/15f13f] Submitted process > NFCORE_METATROPICS:METATROPICS:FIX:FIX_NAMES (22082324_T1)
+Jun-03 15:30:02.074 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-03 15:30:02.075 [Task submitter] INFO  nextflow.Session - [cb/64dadf] Submitted process > NFCORE_METATROPICS:METATROPICS:FIX:FIX_NAMES (22082317_T1)
+Jun-03 15:30:02.140 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-03 15:30:02.141 [Task submitter] INFO  nextflow.Session - [42/7565db] Submitted process > NFCORE_METATROPICS:METATROPICS:FIX:FIX_NAMES (22100074_T1)
+Jun-03 15:30:03.880 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: NFCORE_METATROPICS:METATROPICS:FIX:FIX_NAMES (22082324_T1); status: COMPLETED; exit: 0; error: -; workDir: /data/Daan/Projects/Gitpod/NF_pipeline/work/93/15f13fb7b5d447136c45dbd1d19129]
+Jun-03 15:30:03.911 [Actor Thread 15] WARN  nextflow.container.SingularityCache - Singularity cache directory has not been defined -- Remote image will be stored in the path: /data/Daan/Projects/Gitpod/NF_pipeline/work/singularity -- Use the environment variable NXF_SINGULARITY_CACHEDIR to specify a different location
+Jun-03 15:30:03.913 [Actor Thread 15] INFO  nextflow.container.SingularityCache - Pulling Singularity image https://depot.galaxyproject.org/singularity/fastp:0.23.2--h79da9fb_0 [cache /data/Daan/Projects/Gitpod/NF_pipeline/work/singularity/depot.galaxyproject.org-singularity-fastp-0.23.2--h79da9fb_0.img]
+Jun-03 15:30:03.914 [Actor Thread 9] INFO  nextflow.container.SingularityCache - Pulling Singularity image https://depot.galaxyproject.org/singularity/nanoplot:1.41.0--pyhdfd78af_0 [cache /data/Daan/Projects/Gitpod/NF_pipeline/work/singularity/depot.galaxyproject.org-singularity-nanoplot-1.41.0--pyhdfd78af_0.img]
+Jun-03 15:30:04.408 [Actor Thread 15] DEBUG nextflow.container.SingularityCache - Singularity pull complete image=https://depot.galaxyproject.org/singularity/fastp:0.23.2--h79da9fb_0 path=/data/Daan/Projects/Gitpod/NF_pipeline/work/singularity/depot.galaxyproject.org-singularity-fastp-0.23.2--h79da9fb_0.img
+Jun-03 15:30:04.421 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-03 15:30:04.423 [Task submitter] INFO  nextflow.Session - [6a/11bd30] Submitted process > NFCORE_METATROPICS:METATROPICS:FASTP (22082324_T1)
+Jun-03 15:30:04.487 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: NFCORE_METATROPICS:METATROPICS:FIX:FIX_NAMES (22082317_T1); status: COMPLETED; exit: 0; error: -; workDir: /data/Daan/Projects/Gitpod/NF_pipeline/work/cb/64dadf21d9e9412b1c19f579f0e770]
+Jun-03 15:30:04.520 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-03 15:30:04.521 [Task submitter] INFO  nextflow.Session - [f0/a653f4] Submitted process > NFCORE_METATROPICS:METATROPICS:FASTP (22082317_T1)
+Jun-03 15:30:05.467 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: NFCORE_METATROPICS:METATROPICS:FIX:FIX_NAMES (22100074_T1); status: COMPLETED; exit: 0; error: -; workDir: /data/Daan/Projects/Gitpod/NF_pipeline/work/42/7565db1c68319ab68484ad7a7c30c4]
+Jun-03 15:30:08.840 [Actor Thread 9] DEBUG nextflow.container.SingularityCache - Singularity pull complete image=https://depot.galaxyproject.org/singularity/nanoplot:1.41.0--pyhdfd78af_0 path=/data/Daan/Projects/Gitpod/NF_pipeline/work/singularity/depot.galaxyproject.org-singularity-nanoplot-1.41.0--pyhdfd78af_0.img
+Jun-03 15:30:09.516 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-03 15:30:09.517 [Task submitter] INFO  nextflow.Session - [31/166110] Submitted process > NFCORE_METATROPICS:METATROPICS:NANOPLOT (22082324_T1)
+Jun-03 15:30:11.827 [SIGINT handler] DEBUG nextflow.Session - Session aborted -- Cause: SIGINT
+Jun-03 15:30:11.840 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Jun-03 15:30:11.856 [SIGINT handler] DEBUG nextflow.Session - The following nodes are still active:
+[process] NFCORE_METATROPICS:METATROPICS:HUMAN_MAPPING:MINIMAP2_ALIGN
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) bound ; channel: reference
+  port 2: (value) bound ; channel: bam_format
+  port 3: (value) bound ; channel: cigar_paf_format
+  port 4: (value) bound ; channel: cigar_bam
+  port 5: (cntrl) -     ; channel: $
+
+[process] NFCORE_METATROPICS:METATROPICS:HUMAN_MAPPING:SAMTOOLS_SORT
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] NFCORE_METATROPICS:METATROPICS:HUMAN_MAPPING:SAMTOOLS_FASTQ
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) bound ; channel: interleave
+  port 2: (cntrl) -     ; channel: $
+
+[process] NFCORE_METATROPICS:METATROPICS:METAMAPS_MAP
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] NFCORE_METATROPICS:METATROPICS:METAMAPS_CLASSIFY
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] NFCORE_METATROPICS:METATROPICS:R_METAPLOT
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] NFCORE_METATROPICS:METATROPICS:KRONA_KTIMPORTTAXONOMY
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) OPEN  ; channel: taxonomy
+  port 2: (cntrl) -     ; channel: $
+
+[process] NFCORE_METATROPICS:METATROPICS:REF_FASTA
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] NFCORE_METATROPICS:METATROPICS:REFFIX_FASTA
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] NFCORE_METATROPICS:METATROPICS:SEQTK_SUBSEQ
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] NFCORE_METATROPICS:METATROPICS:MEDAKA
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] NFCORE_METATROPICS:METATROPICS:SAMTOOLS_COVERAGE
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] NFCORE_METATROPICS:METATROPICS:IVAR_CONSENSUS
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) bound ; channel: save_mpileup
+  port 2: (cntrl) -     ; channel: $
+
+[process] NFCORE_METATROPICS:METATROPICS:HOMOPOLISH_POLISHING
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] NFCORE_METATROPICS:METATROPICS:ADDING_DEPTH
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] NFCORE_METATROPICS:METATROPICS:FINAL_REPORT
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: report
+  port 1: (cntrl) -     ; channel: $
+
+Jun-03 15:30:11.858 [main] DEBUG nextflow.Session - Session await > all processes finished
+Jun-03 15:30:11.860 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Jun-03 15:30:11.867 [Actor Thread 14] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=NFCORE_METATROPICS:METATROPICS:R_METAPLOT; work-dir=null
+  error [java.lang.InterruptedException]: java.lang.InterruptedException
+Jun-03 15:30:11.867 [main] INFO  nextflow.Nextflow - -[0;35m[nf-core/metatropics][0;31m Pipeline completed with errors[0m-
+Jun-03 15:30:11.867 [Actor Thread 15] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=NFCORE_METATROPICS:METATROPICS:FINAL_REPORT; work-dir=null
+  error [java.lang.InterruptedException]: java.lang.InterruptedException
+Jun-03 15:30:11.868 [Actor Thread 17] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=NFCORE_METATROPICS:METATROPICS:SEQTK_SUBSEQ; work-dir=null
+  error [java.lang.InterruptedException]: java.lang.InterruptedException
+Jun-03 15:30:11.877 [main] WARN  n.processor.TaskPollingMonitor - Killing running tasks (4)
+Jun-03 15:30:11.885 [main] DEBUG n.executor.local.LocalTaskHandler - Unable to kill NFCORE_METATROPICS:METATROPICS:KRONA_KRONADB -- command: kill -TERM 692166; exit: 1 
+ bash: line 1: kill: (692166) - No such process
+
+Jun-03 15:30:11.890 [main] DEBUG n.executor.local.LocalTaskHandler - Unable to kill NFCORE_METATROPICS:METATROPICS:FASTP (22082324_T1) -- command: kill -TERM 693442; exit: 1 
+ bash: line 1: kill: (693442) - No such process
+
+Jun-03 15:30:11.896 [main] DEBUG n.executor.local.LocalTaskHandler - Unable to kill NFCORE_METATROPICS:METATROPICS:FASTP (22082317_T1) -- command: kill -TERM 693487; exit: 1 
+ bash: line 1: kill: (693487) - No such process
+
+Jun-03 15:30:11.901 [main] DEBUG n.executor.local.LocalTaskHandler - Unable to kill NFCORE_METATROPICS:METATROPICS:NANOPLOT (22082324_T1) -- command: kill -TERM 694738; exit: 1 
+ bash: line 1: kill: (694738) - No such process
+
+Jun-03 15:30:11.904 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=4; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=3; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=4; succeedDuration=7.3s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=4; peakCpus=15; peakMemory=90 GB; ]
+Jun-03 15:30:11.904 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+Jun-03 15:30:11.906 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
+Jun-03 15:30:12.254 [main] DEBUG nextflow.trace.TimelineObserver - Workflow completed -- rendering execution timeline
+Jun-03 15:30:12.339 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Jun-03 15:30:12.355 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
