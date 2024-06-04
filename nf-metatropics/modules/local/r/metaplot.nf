@@ -27,7 +27,7 @@ process R_METAPLOT {
     conda "YOUR-TOOL-HERE"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
         'https://depot.galaxyproject.org/singularity/YOUR-TOOL-HERE':
-        'daanjansen94/r_plot:latest' }"
+        'daanjansen94/nf_r_plots:latest' }"
 
     input:
     tuple val(meta), path(classification), path(classlengh), path(classcov), path(classtotal)
