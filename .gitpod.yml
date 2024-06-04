@@ -5,3 +5,5 @@ tasks:
       curl -s https://get.nextflow.io | bash &&
       sudo mv nextflow /usr/local/bin/
       echo "Nextflow installed"
+
+      chmod +x /workspace/NF_pipeline/nf-metatropics/bin/produce_fasta.pl
