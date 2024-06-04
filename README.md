@@ -5,5 +5,5 @@ A small tutorial on the metatropics Nextflow pipeline to perform viral identific
 nextflow run nf-metatropics/ -profile docker -params-file params.yaml -resume
 ```
 
-### 
+### add more information about all paramaters...
 
