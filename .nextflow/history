@@ -1,0 +1,1 @@
+2024-06-04 16:04:05	9m 2s	irreverent_varahamihira	OK	8cb27832a964f03a4a8d3a99ed4e4523	2fb7cf82-dadd-4853-bd3c-279905b6e4e7	nextflow run nf-metatropics/ -profile docker -params-file params.yaml -resume
