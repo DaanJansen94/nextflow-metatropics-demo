@@ -7,3 +7,4 @@ tasks:
       echo "Nextflow installed"
 
       chmod +x /workspace/NF_pipeline/nf-metatropics/bin/produce_fasta.pl
+      chmod +x /workspace/NF_pipeline/nf-metatropics/bin/adding_bcfdepth_V2.pl
