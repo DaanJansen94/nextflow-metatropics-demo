@@ -6,5 +6,5 @@ tasks:
       sudo mv nextflow /usr/local/bin/
       echo "Nextflow installed"
 
-      chmod +x /workspace/NF_pipeline/nf-metatropics/bin/produce_fasta.pl
-      chmod +x /workspace/NF_pipeline/nf-metatropics/bin/adding_bcfdepth_V2.pl
+      chmod +x /workspace/nextflow-metatropics-demo/nf-metatropics/bin/produce_fasta.pl
+      chmod +x /workspace/nextflow-metatropics-demo/nf-metatropics/bin/adding_bcfdepth_V2.pl
