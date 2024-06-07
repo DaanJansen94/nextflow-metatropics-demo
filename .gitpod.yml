@@ -9,6 +9,12 @@ tasks:
 
       chmod +x /workspace/nextflow-metatropics-demo/nf-metatropics/bin/produce_fasta.pl
       chmod +x /workspace/nextflow-metatropics-demo/nf-metatropics/bin/adding_bcfdepth_V2.pl
+
+ # exposed ports
+ports:
+- port: 8080
+  onOpen: open-preview
+  visibility: public
   
 vscode:
   extensions: # based on nf-core.nf-core-extensionpack
