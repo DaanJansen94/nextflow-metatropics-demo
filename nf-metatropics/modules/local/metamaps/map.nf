@@ -55,7 +55,7 @@ process METAMAPS_MAP {
     // TODO nf-core: Please indent the command appropriately (4 spaces!!) to help with readability ;)
     //gunzip -c $input > read_temp.fastq
     """
-    metamaps mapDirectly --all $args -q $input -o ${prefix}_classification_results --maxmemory 12
+    metamaps mapDirectly --all --pi 95 -w 100 $args -q $input -o ${prefix}_classification_results --maxmemory 12
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
