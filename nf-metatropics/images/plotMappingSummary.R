@@ -40,10 +40,11 @@ plotTaxonIDs <- list()
 taxonID_2_mappingUnits <- list()
 final_report <- list()
 final_report<-list(Sample=vector("character",length(countsPerUnit)),Accession=vector("character",length(countsPerUnit)),TaxID=vector("character",length(countsPerUnit)), 
-                   VirusName=vector("character",length(countsPerUnit)), MappedReads=vector("numeric",length(countsPerUnit)), 
+                   Virus=vector("character",length(countsPerUnit)), Reads=vector("numeric",length(countsPerUnit)), 
                    FractionMappedReads=vector("numeric", length(countsPerUnit)), Abundance=vector("numeric",length(countsPerUnit)),
-                   GenomeCoverage=vector("numeric", length(countsPerUnit)), DepthAverage=vector("numeric", length(countsPerUnit)), 
-                   MedianReadIdentities=vector("numeric", length(countsPerUnit)), MeanReadLength=vector("numeric", length(countsPerUnit)))
+                   GenomeCoverage=vector("numeric", length(countsPerUnit)), Vertical_coverage=vector("numeric", length(countsPerUnit)), 
+                   Read_identity=vector("numeric", length(countsPerUnit)), Read_length=vector("numeric", length(countsPerUnit)))
+
 
 final_report$Sample<-rep(sample,length(countsPerUnit))
 
@@ -104,10 +105,10 @@ for(i in 1:length(countsPerUnit)){
   
 }
 final_report$VirusName<-ViNameVec
-final_report$DepthAverage<-depthAveVec
+final_report$Vertical_coverage<-depthAveVec
 final_report$GenomeCoverage<-covgenVec
-final_report$MedianReadIdentities<-wholeIdenVec
-final_report$MeanReadLength<-wholeLenVec
+final_report$Read_identity<-wholeIdenVec
+final_report$Read_length<-wholeLenVec
 
 final_report$MappedReads<-as.vector(countsPerUnit)
 final_report$FractionMappedReads<-as.vector((100*freqTotalPerUnit))
@@ -117,8 +118,14 @@ final_report_df<-as.data.frame(final_report)
 final_report_df_ft <- final_report_df[final_report_df[["FractionMappedReads"]]>=(minimumPlotFreq*100),]
 
 #write.table(as.data.frame(final_report), file = paste(prefix, '.final_report.tsv', sep = ""), sep = "\t") 
+
+# TaxID, FractionMappedReads,Abundance,GenomeCoverage --> remove
+## All change all " symbol by nothing 
+
+# Final report
 write.table(final_report_df_ft, file = paste(prefix, '.final_report.tsv', sep = ""), sep = "\t") 
 
+# Continues
 if(dim(final_report_df[(final_report_df[["MedianReadIdentities"]]>=0.8 & final_report_df[["GenomeCoverage"]]>=50 & final_report_df[["MeanReadLength"]]>=500),])[1]>0){
   denovo<-"no"
 }else{
