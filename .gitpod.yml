@@ -1,10 +1,16 @@
 image: gitpod/workspace-full
 
 tasks:
-  - command: | 
+  - name: Install Nextflow and Set Permissions
+    command: |
       curl -s https://get.nextflow.io | bash &&
       sudo mv nextflow /usr/local/bin/
       echo "Nextflow installed"
 
       chmod +x /workspace/nextflow-metatropics-demo/nf-metatropics/bin/produce_fasta.pl
       chmod +x /workspace/nextflow-metatropics-demo/nf-metatropics/bin/adding_bcfdepth_V2.pl
+
+  - name: Open README and its Preview
+    command: |
+      gp open README.md
+      gp open preview:README.md
