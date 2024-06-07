@@ -9,7 +9,7 @@ tasks:
 
       chmod +x /workspace/nextflow-metatropics-demo/nf-metatropics/bin/produce_fasta.pl
       chmod +x /workspace/nextflow-metatropics-demo/nf-metatropics/bin/adding_bcfdepth_V2.pl
-
-  - name: Open README 
-    command: |
-      code README.md
+      
+vscode:
+  extensions: # based on nf-core.nf-core-extensionpack
+    - esbenp.prettier-vscode # Markdown/CommonMark linting and style checking for Visual Studio Code
