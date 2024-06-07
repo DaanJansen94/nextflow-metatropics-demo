@@ -11,7 +11,7 @@ tasks:
       chmod +x /workspace/nextflow-metatropics-demo/nf-metatropics/bin/adding_bcfdepth_V2.pl
 
 port: 
--port: 3000
+- port: 3000
   onOpen: open-browser
   
 vscode:
