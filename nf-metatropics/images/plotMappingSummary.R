@@ -15,7 +15,7 @@ if(length(args) > 1)
 	minimumPlotFreq <- args[[2]]
 }
 minimumPlotFreq <-as.numeric(minimumPlotFreq)
-sample<-gsub("_classification_results","",prefix)
+sample<-gsub("_T1_classification_results",,prefix)
 readtotal<-scan(paste(prefix, ".total_reads", sep = ""))
 
 
