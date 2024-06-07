@@ -10,7 +10,6 @@ tasks:
       chmod +x /workspace/nextflow-metatropics-demo/nf-metatropics/bin/produce_fasta.pl
       chmod +x /workspace/nextflow-metatropics-demo/nf-metatropics/bin/adding_bcfdepth_V2.pl
 
-  - name: Open README and its Preview
+  - name: Open README 
     command: |
-      gp open README.md
-      gp open preview:README.md
+      code README.md
