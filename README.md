@@ -14,3 +14,8 @@ nextflow run nf-metatropics/ -profile docker -params-file params.yaml -resume
 
 ### add more information about all paramaters...
 
+## 1)Visualize output consensus genomes here --> Parthogen idrntificaton
+table of output file
+
+## 2) Cnosneuss genomes generation
+## Nextclade link to click on and enter consensus genome
