@@ -18,8 +18,6 @@ minimumPlotFreq <-as.numeric(minimumPlotFreq)
 sample<-gsub("_T1_classification_results",,prefix)
 readtotal<-scan(paste(prefix, ".total_reads", sep = ""))
 
-
-
 data_LandI <- read.delim(paste(prefix, ".EM.lengthAndIdentitiesPerMappingUnit", sep = ""))
 data_LandI <- data_LandI[data_LandI[["AnalysisLevel"]] == "EqualCoverageUnit",]
 
@@ -42,8 +40,8 @@ final_report <- list()
 final_report<-list(Sample=vector("character",length(countsPerUnit)),Accession=vector("character",length(countsPerUnit)),TaxID=vector("character",length(countsPerUnit)), 
                    Virus=vector("character",length(countsPerUnit)), Reads=vector("numeric",length(countsPerUnit)), 
                    FractionMappedReads=vector("numeric", length(countsPerUnit)), Abundance=vector("numeric",length(countsPerUnit)),
-                   GenomeCoverage=vector("numeric", length(countsPerUnit)), Vertical_coverage=vector("numeric", length(countsPerUnit)), 
-                   Read_identity=vector("numeric", length(countsPerUnit)), Read_length=vector("numeric", length(countsPerUnit)))
+                   GenomeCoverage=vector("numeric", length(countsPerUnit)), `Vertical coverage`=vector("numeric", length(countsPerUnit)), 
+                  `Read identity`=vector("numeric", length(countsPerUnit)), `Read length`=vector("numeric", length(countsPerUnit)))
 
 
 final_report$Sample<-rep(sample,length(countsPerUnit))
@@ -105,10 +103,10 @@ for(i in 1:length(countsPerUnit)){
   
 }
 final_report$VirusName<-ViNameVec
-final_report$Vertical_coverage<-depthAveVec
+final_report$`Vertical coverage`<-depthAveVec
 final_report$GenomeCoverage<-covgenVec
-final_report$Read_identity<-wholeIdenVec
-final_report$Read_length<-wholeLenVec
+final_report$`Read identity` <-wholeIdenVec
+final_report$`Read Length`<-wholeLenVec
 
 final_report$MappedReads<-as.vector(countsPerUnit)
 final_report$FractionMappedReads<-as.vector((100*freqTotalPerUnit))
