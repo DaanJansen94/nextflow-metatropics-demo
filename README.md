@@ -1,6 +1,6 @@
 # nextflow-metatropics-demo
 A small tutorial on the metatropics Nextflow pipeline to perform viral identification and creation of consensus genomes
-
+[GitHub Pages] (https://github.com/DaanJansen94/nf-metatropics/)
 
 ## Explain first what what is, readsin input and excel file
 ## Databases in ... 
