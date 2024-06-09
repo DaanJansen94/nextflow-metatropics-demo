@@ -36,3 +36,5 @@ nextflow run nf-metatropics/ -profile docker -params-file params.yaml -resume
   Consensus genome generated and stored as fasta files
   --> Go to 'Output > homopolish > *fasta files' --> download fasta files --> visualize in (nextclade)[https://clades.nextstrain.org/]
 
+  ? Make link here? 
+
