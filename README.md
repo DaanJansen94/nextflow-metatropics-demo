@@ -34,8 +34,7 @@ nextflow run nf-metatropics/ -profile docker -params-file params.yaml -resume
   [mpox Clade II](./Output/homopolish/Casus2_T1.NC_063383_1.polish.fasta)
   which is located in the folder (/Output/homopolish/)
 
-  This can be visualized in (nextclade)[https://clades.nextstrain.org/] for a fast overview 
-
+  This can be visualized in [nextclade](https://clades.nextstrain.org/) for a fast overview 
 
 
 ## Explain first what what is, readsin input and excel file
