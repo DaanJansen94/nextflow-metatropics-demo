@@ -12,10 +12,7 @@ https://gitpod.io/#https://github.com/DaanJansen94/nextflow-metatropics-demo
 * [CSV file](./Input/mpox.csv)
 
 ### 4. Running pipeline
-
-Add Input PATHS
---> in params.yml file (show yml file) hzre
-
+Define Paths (Input,Output, viral database): [params.yml file](./params.yml)
 
 ```
 nextflow run nf-metatropics/ -profile docker -params-file params.yaml -resume
@@ -28,16 +25,5 @@ nextflow run nf-metatropics/ -profile docker -params-file params.yaml -resume
 * 5.2 Download viral consensus genomes
   Consensus genome generated and stored as fasta files in [mpox Clade I](./Output/homopolish/Casus1_T1.NC_003310_1.polish.fasta) and [mpox Clade II](./Output/homopolish/Casus2_T1.NC_063383_1.polish.fasta), which is located in the folder (/Output/homopolish/)
 
-* 5.3 Visualuze consensus genomes
+* 5.3 Visualize consensus genomes
   This can be visualized in [nextclade](https://clades.nextstrain.org/) for a fast overview 
-
-
-
-
-
-## Explain first what what is, readsin input and excel file
-## Databases in ... 
-## metatropics nextflowpipeline in 'nf-metatropics'
-## We can run this pipeline by the following command (show command) + explain using docker to pull software required and in yaml file the actuall path where input is, output will beo stroed etc
-
-
