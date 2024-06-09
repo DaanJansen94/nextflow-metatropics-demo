@@ -2,7 +2,7 @@
 A small tutorial on the [metatropics](https://github.com/DaanJansen94/nf-metatropics/) nextflow pipeline to perform viral identification and creation of consensus genomes from nanopore (metagenomic) sequencing data.
 
 ### Summary of the Metatropics Pipeline
-![Figure](./nf-metatropics/Metatropics.jpg)
+![Figure](./nf-metatropics/Metatropic.jpg)
 
 ## Input
 
