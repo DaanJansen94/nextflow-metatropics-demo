@@ -16,25 +16,23 @@ https://gitpod.io/#https://github.com/DaanJansen94/nextflow-metatropics-demo
 Add Input PATHS
 --> in params.yml file (show yml file) hzre
 
+
 ```
 nextflow run nf-metatropics/ -profile docker -params-file params.yaml -resume
 ```
 
-
 ### 5. After running pipeline
-* Viral identification
-  Viruses identified stored in xlsx.file
-  [tsv file](./Output/final/all.final_report.tsv)
-  which is located in the folder (/Output/final)
+* 5.1 Viral identification:
+  Viruses identified stored in [tsv file](./Output/final/all.final_report.tsv), which is located in the folder (/Output/final)
   
-* Viral consensus genomes
-  Consensus genome generated and stored as fasta files in 
-  [mpox Clade I](./Output/homopolish/Casus1_T1.NC_003310_1.polish.fasta)
-  and 
-  [mpox Clade II](./Output/homopolish/Casus2_T1.NC_063383_1.polish.fasta)
-  which is located in the folder (/Output/homopolish/)
+* 5.2 Download viral consensus genomes
+  Consensus genome generated and stored as fasta files in [mpox Clade I](./Output/homopolish/Casus1_T1.NC_003310_1.polish.fasta) and [mpox Clade II](./Output/homopolish/Casus2_T1.NC_063383_1.polish.fasta), which is located in the folder (/Output/homopolish/)
 
+* 5.3 Visualuze consensus genomes
   This can be visualized in [nextclade](https://clades.nextstrain.org/) for a fast overview 
+
+
+
 
 
 ## Explain first what what is, readsin input and excel file
