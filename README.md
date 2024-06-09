@@ -24,15 +24,17 @@ nextflow run nf-metatropics/ -profile docker -params-file params.yaml -resume
 ### 5. After running pipeline
 * Viral identification
   Viruses identified stored in xlsx.file
-  --> Go to 'Output > final > all.final.xlsx' --> downoad file --> open on laptop
-  [tsv file](./Output/all.final_report.tsv)
+  [tsv file](./Output/final/all.final_report.tsv)
+  which is located in the folder (/Output/final)
   
 * Viral consensus genomes
-  Consensus genome generated and stored as fasta files
-  --> Go to 'Output > homopolish > *fasta files' --> download fasta files --> visualize in (nextclade)[https://clades.nextstrain.org/]
+  Consensus genome generated and stored as fasta files in 
+  [mpox Clade I](./Output/homopolish/Casus1_T1.NC_003310_1.polish.fasta)
+  and 
+  [mpox Clade II](./Output/homopolish/Casus2_T1.NC_063383_1.polish.fasta)
+  which is located in the folder (/Output/homopolish/)
 
-
-
+  This can be visualized in (nextclade)[https://clades.nextstrain.org/] for a fast overview 
 
 
 
