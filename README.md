@@ -12,33 +12,33 @@ https://gitpod.io/#https://github.com/DaanJansen94/nextflow-metatropics-demo
 * [CSV file](./Input/mpox.csv)
 
 ### 4. Running pipeline
---> PAths to Iput, Database, etc
 
-* Open in gitpod: https://github.com/DaanJansen94/nextflow-metatropics-demo
+Add Input PATHS
+--> in params.yml file (show yml file) hzre
+
+```
+nextflow run nf-metatropics/ -profile docker -params-file params.yaml -resume
+```
+
+
+### 5. After running pipeline
+* Viral identification
+  Viruses identified stored in xlsx.file
+  --> Go to 'Output > final > all.final.xlsx' --> downoad file --> open on laptop
+  [tsv file](./Output/all.final_report.tsv)
+  
+* Viral consensus genomes
+  Consensus genome generated and stored as fasta files
+  --> Go to 'Output > homopolish > *fasta files' --> download fasta files --> visualize in (nextclade)[https://clades.nextstrain.org/]
+
+
+
+
+
 
 ## Explain first what what is, readsin input and excel file
 ## Databases in ... 
 ## metatropics nextflowpipeline in 'nf-metatropics'
 ## We can run this pipeline by the following command (show command) + explain using docker to pull software required and in yaml file the actuall path where input is, output will beo stroed etc
 
-## 1) Running pipeline
-```
-nextflow run nf-metatropics/ -profile docker -params-file params.yaml -resume
-```
-
-### add more information about all paramaters...
-
-
-
-## 2) After running pipeline
-
-* Viral identification
-  Viruses identified stored in xlsx.file
-  --> Go to 'Output > final > all.final.xlsx' --> downoad file --> open on laptop
-  
-* Viral consensus genomes
-  Consensus genome generated and stored as fasta files
-  --> Go to 'Output > homopolish > *fasta files' --> download fasta files --> visualize in (nextclade)[https://clades.nextstrain.org/]
-
-  ? Make link here? 
 
