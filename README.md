@@ -7,7 +7,7 @@ https://gitpod.io/#https://github.com/DaanJansen94/nextflow-metatropics-demo
 ### Summary of the metatropics pipeline
 ![Figure](./nf-metatropics/Metatropics.jpg)
 
-## Required Input
+## Required Input [Input](/workspace/nextflow-metatropics-demo/Input/)
 * Raw signal or squiggle (fast5 files)
 * Raw reads (fastq) [metatropics](https://github.com/DaanJansen94/nf-metatropics/) 
 
