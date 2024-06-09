@@ -8,13 +8,8 @@ https://gitpod.io/#https://github.com/DaanJansen94/nextflow-metatropics-demo
 ![Figure](./nf-metatropics/Metatropics.jpg)
 ### 3. Required Input
 * Raw signal or squiggle (fast5 files)
-* Raw reads (fastq files) 
+* Raw reads (fastq files)
 * [CSV file](./Input/mpox.csv)
-
-
-
-
-
 
 ### 4. Running pipeline
 --> PAths to Iput, Database, etc
