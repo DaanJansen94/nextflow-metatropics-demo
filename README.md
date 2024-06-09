@@ -12,7 +12,7 @@ https://gitpod.io/#https://github.com/DaanJansen94/nextflow-metatropics-demo
 * [CSV file](./Input/mpox.csv)
 
 ### 4. Running pipeline
-Define Paths (Input,Output, viral database): [params.yml file](./params.yml)
+Define Paths (Input,Output, viral database): [params.yml file](./params.yaml)
 
 ```
 nextflow run nf-metatropics/ -profile docker -params-file params.yaml -resume
