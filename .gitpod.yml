@@ -14,6 +14,3 @@ vscode:
   extensions:
     # nf-core.nf-core-extensionpack
     - esbenp.prettier-vscode # Markdown/CommonMark linting and style checking for Visual Studio Code
-
-  settings:
-    "workbench.colorTheme": "Default Dark+"
