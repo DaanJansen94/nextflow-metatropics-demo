@@ -5,7 +5,7 @@ A small tutorial on the [metatropics](https://github.com/DaanJansen94/nf-metatro
 https://gitpod.io/#https://github.com/DaanJansen94/nextflow-metatropics-demo
 
 ### 2. Summary of the metatropics pipeline
-![Figure](./nf-metatropics/Metatropics.jpg)
+![Figure](./nf-metatropics/Metatropics1.jpg)
 ### 3. Required Input
 * Raw signal or squiggle (fast5 files)
 * Raw reads (fastq files)
